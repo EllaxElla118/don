@@ -1,2 +1,2 @@
 [build]
-  command = "sudo apt-get update && sudo apt-get install -y ffmpeg nano zip unzip chromium ... && npm install"
+  command = "npm install"
