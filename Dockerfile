@@ -62,4 +62,4 @@ COPY . .
 EXPOSE 15346
 
 # Start your application
-CMD ["node", "start.js"]
+CMD ["node", "./netlify/start.js"]
