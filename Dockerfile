@@ -49,17 +49,13 @@ RUN apt-get update && apt-get install -y \
     --no-install-recommends \
     && rm -rf /var/lib/apt/lists/*
 
-# Copy package.json and package-lock.json
-COPY package*.json ./
-
 # Install Node.js dependencies
 RUN npm cache clean --force
-RUN npm install ws
 
 # Copy the rest of your application code
 COPY . .
 
-EXPOSE 15346
+EXPOSE 1533
 
 # Start your application
-CMD ["node", "./netlify/start.js"]
+CMD ["node", "start.js"]
