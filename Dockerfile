@@ -3,10 +3,6 @@ FROM node:slim
 
 # Install required packages for Puppeteer and WhatsApp Web
 RUN apt-get update && apt-get install -y \
-    ffmpeg \
-    nano \
-    zip unzip \
-    chromium \
     gconf-service \
     libgbm-dev \
     libasound2 \
@@ -46,7 +42,6 @@ RUN apt-get update && apt-get install -y \
     lsb-release \
     xdg-utils \
     wget \
-    --no-install-recommends \
     && rm -rf /var/lib/apt/lists/*
 
 # Install Node.js dependencies
