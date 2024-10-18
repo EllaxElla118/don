@@ -51,6 +51,7 @@ RUN apt-get update && apt-get install -y \
 
 # Install Node.js dependencies
 RUN npm cache clean --force
+RUN npm i puppeteer
 
 # Copy the rest of your application code
 COPY . .
