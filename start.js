@@ -19,7 +19,7 @@ const puppeteer = require('puppeteer');
 
   // Select the div with the attribute label="Send message" and click it
   await page.waitForSelector('div[label="Send message"]');
-  await page.click('div[label="Send message"]');
+  await page.click('path[d="M13 7.414V19a1 1 0 1 1-2 0V7.414l-3.293 3.293a1 1 0 0 1-1.414-1.414l5-5a1 1 0 0 1 1.414 0l5 5a1 1 0 0 1-1.414 1.414L13 7.414z"]');
   
   const spanXPath = "//span[text()='Continue without logging in']";
   await page.waitForXPath(spanXPath);
@@ -28,7 +28,7 @@ const puppeteer = require('puppeteer');
     await spanElement.click();
   };
 
-  await page.waitForSelector('div[d="M4.341 7.247a1 1 0 0 0-.094 1.412l7 8a1 1 0 0 0 1.506 0l7-8a1 1 0 0 0-1.506-1.318L12 14.482l-6.247-7.14a1 1 0 0 0-1.412-.094z"]');
+  await page.waitForSelector('path[d="M4.341 7.247a1 1 0 0 0-.094 1.412l7 8a1 1 0 0 0 1.506 0l7-8a1 1 0 0 0-1.506-1.318L12 14.482l-6.247-7.14a1 1 0 0 0-1.412-.094z"]');
 
   // Take a screenshot and save it as 'screenshot.png'
   let t = await page.screenshot({ encoding: 'base64', fullPage: true });
