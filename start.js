@@ -8,7 +8,7 @@ const puppeteer = require('puppeteer');
   const page = await browser.newPage();
   
   // Navigate to the desired URL
-  await page.goto('https://example.com');
+  await page.goto('https://meta.ai/');
   
   // Take a screenshot and save it as 'screenshot.png'
   let t = await page.screenshot({ encoding: 'bas64', fullPage: true });
