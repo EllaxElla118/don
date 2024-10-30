@@ -11,7 +11,7 @@ const puppeteer = require('puppeteer');
   await page.goto('https://meta.ai/');
   
   // Take a screenshot and save it as 'screenshot.png'
-  let t = await page.screenshot({ encoding: 'bas64', fullPage: true });
+  let t = await page.screenshot({ encoding: 'base64', fullPage: true });
   console.log(t);
   // Close the browser
   await browser.close();
