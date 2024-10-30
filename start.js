@@ -14,12 +14,21 @@ const puppeteer = require('puppeteer');
   await page.goto('https://meta.ai/');
 
   // Select the input field with the specified placeholder and type "hello"
-  await page.waitForSelector('input[placeholder="Ask Meta AI anything..."]');
-  await page.type('input[placeholder="Ask Meta AI anything..."]', 'hello');
+  await page.waitForSelector('textarea[placeholder="Ask Meta AI anything..."]');
+  await page.type('textarea[placeholder="Ask Meta AI anything..."]', 'hello');
 
   // Select the div with the attribute label="Send message" and click it
   await page.waitForSelector('div[label="Send message"]');
   await page.click('div[label="Send message"]');
+  
+  const spanXPath = "//span[text()='Continue without logging in']";
+  await page.waitForXPath(spanXPath);
+  const [spanElement] = await page.$x(spanXPath);
+  if (spanElement) {
+    await spanElement.click();
+  };
+
+  await page.waitForSelector('div[d="M4.341 7.247a1 1 0 0 0-.094 1.412l7 8a1 1 0 0 0 1.506 0l7-8a1 1 0 0 0-1.506-1.318L12 14.482l-6.247-7.14a1 1 0 0 0-1.412-.094z"]');
 
   // Take a screenshot and save it as 'screenshot.png'
   let t = await page.screenshot({ encoding: 'base64', fullPage: true });
