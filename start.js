@@ -2,7 +2,7 @@ const puppeteer = require('puppeteer');
 
 (async () => {
   // Launch a new browser instance
-  const browser = await puppeteer.launch({ args: [--no-sandbox] });
+  const browser = await puppeteer.launch({ args: ['--no-sandbox'] });
   
   // Create a new page
   const page = await browser.newPage();
