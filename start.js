@@ -18,7 +18,7 @@ const puppeteer = require('puppeteer');
   await page.type('textarea[placeholder="Ask Meta AI anything..."]', 'hello');
 
   // Select the div with the attribute label="Send message" and click it
-  await page.waitForSelector('div[label="Send message"]');
+  await page.waitForSelector('path[d="M13 7.414V19a1 1 0 1 1-2 0V7.414l-3.293 3.293a1 1 0 0 1-1.414-1.414l5-5a1 1 0 0 1 1.414 0l5 5a1 1 0 0 1-1.414 1.414L13 7.414z"]');
   await page.click('path[d="M13 7.414V19a1 1 0 1 1-2 0V7.414l-3.293 3.293a1 1 0 0 1-1.414-1.414l5-5a1 1 0 0 1 1.414 0l5 5a1 1 0 0 1-1.414 1.414L13 7.414z"]');
   
   const spanXPath = "//span[text()='Continue without logging in']";
