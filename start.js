@@ -8,7 +8,7 @@ const puppeteer = require('puppeteer');
   const page = await browser.newPage();
 
   // Set custom screen size (e.g., 1280x800)
-  await page.setViewport({ width: 1280, height: 800 });
+  await page.setViewport({ width: 1080, height: 1960 });
   
   // Navigate to the desired URL
   await page.goto('https://meta.ai/', { waitUntil: 'networkidle0' });
