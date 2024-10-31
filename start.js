@@ -19,7 +19,6 @@ const puppeteer = require('puppeteer');
 
   // Select the div with the attribute label="Send message" and click it
   const pathXPath = "//path[contains(@d, 'M13 7.414')]";
-  await page.waitForXPath(pathXPath);
   const [pathElement] = await page.$x(pathXPath);
   await pathElement.click();
     
