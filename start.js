@@ -8,7 +8,7 @@ const puppeteer = require('puppeteer');
   const page = await browser.newPage();
 
   // Set custom screen size (e.g., 1280x800)
-  await page.setViewport({ width: 1080, height: 1960 });
+  await page.setViewport({ width: 1349, height: 643 });
   
   // Navigate to the desired URL
   await page.goto('https://meta.ai/', { waitUntil: 'networkidle0' });
@@ -19,16 +19,16 @@ const puppeteer = require('puppeteer');
   
  await page.evaluate(() => {
     const span = Array.from(document.querySelectorAll('path')).find(el => el.d === 'M13 7.414V19a1 1 0 1 1-2 0V7.414l-3.293 3.293a1 1 0 0 1-1.414-1.414l5-5a1 1 0 0 1 1.414 0l5 5a1 1 0 0 1-1.414 1.414L13 7.414z');
-    if (span) {
+    
       span.click(); // Click the span, or perform another action as needed
-    }
+    
   });
   
  await page.evaluate(() => {
     const span = Array.from(document.querySelectorAll('span')).find(el => el.textContent === 'Continue without logging in');
-    if (span) {
+    
       span.click(); // Click the span, or perform another action as needed
-    }
+    
   });
   
   // Take a screenshot and save it as 'screenshot.png'
